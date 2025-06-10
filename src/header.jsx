@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Header({ name }) {
   return (
     <div className="App-Header-Row" style={{ backgroundColor: "pink" }}>
+        
       <div>
         <h1>{name}</h1>
       </div>
