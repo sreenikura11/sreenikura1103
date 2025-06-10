@@ -2,17 +2,19 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Headr from "./Headr";
+import Header from "./Header";
 import Footer from "./Footer";
 import Login from "./Login";
 import Register from "./Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 function App() {
+  const [user,setUser] = useState({});
+  const [users,setUsers] = useState([])
   return (
     <div className="App">
       <BrowserRouter>
-        <Headr name="mu-react-store" />
+        <Header name="mu-react-store" />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
