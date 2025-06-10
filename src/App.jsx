@@ -2,12 +2,12 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Headr from "./headr";
-import Footer from "./footer";
-import Login from "./login";
-import Register from "./register";
+import Headr from "./Headr";
+import Footer from "./Footer";
+import Login from "./Login";
+import Register from "./Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./home";
+import Home from "./Home";
 function App() {
   return (
     <div className="App">
