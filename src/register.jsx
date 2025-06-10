@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Appcontext } from "./App";
 export default function Register() {
-  const [user, setUser] = useState({});
+  const {user, setUser, users, setUsers } = useState({});
+  const handleSubmit = () => {
+    setUsers([...users, user]);
+    console.log(users)
+  };
   const [count, setCount] = useState(0);
   const [dic, setDic] = useState(0);
   const [a,setA] = useState(0);

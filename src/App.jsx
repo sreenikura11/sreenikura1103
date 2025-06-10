@@ -9,8 +9,8 @@ import Register from "./Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 function App() {
-  const [user,setUser] = useState({});
-  const [users,setUsers] = useState([])
+  const [user, setUser] = useState({});
+  const [users,setUsers] = useState([]);
   return (
     <div className="App">
       <BrowserRouter>
