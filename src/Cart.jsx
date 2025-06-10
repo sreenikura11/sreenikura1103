@@ -2,22 +2,32 @@ import React from "react";
 import { AppContext } from "./App";
 import { useContext } from "react";
 export default function Cart() {
-  const { cart } = useContext(AppContext);
+  const { cart,setCart } = useContext(AppContext);
   const increment = () => {
-    setCart({ ...Cart, qty: cart[qty] + 1});
-
-
+    setCart({ ...cart, qty: cart.qty + 1 });
   };
 
   const decrement = () => {
-   setCart({ ...cart, qty: cart[qty] - 1})
-
-  }
+    cart.qty > 0 && setCart({ ...cart, qty: cart.qty - 1 });
+  };
   return (
     <div>
-        <h1>My Cart</h1>
+      <h2>My Cart</h2>
+      <h3>{cart.name}</h3>
+      <p>{cart.desc}</p>
+      <h3>Price:{cart.price}</h3>
+      <p>
+        <button onClick={decrement}>-</button>
+        {cart.qty}
+        <button onClick={increment}>+</button>
+      </p>
+      <hr />
+      <h2>Order Value:{cart.price * cart.qty}</h2>
+      <hr />
+      <p>
+        <button>Place Order</button>
+        <button>Login to Order</button>
+      </p>
     </div>
-  )
-
-  
+  );
 }
