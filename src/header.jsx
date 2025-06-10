@@ -1,8 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-
-export default function Header({ name, isLoggedIn, handleLogout }) {
+export default function Header({ name }) {
   return (
     <div className="App-Header-Row" style={{ backgroundColor: "pink" }}>
       <div>
@@ -16,15 +15,9 @@ export default function Header({ name, isLoggedIn, handleLogout }) {
           <li>
             <Link to="/cart">Cart</Link>
           </li>
-          {!isLoggedIn ? (
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          ) : (
-            <li>
-              <button onClick={handleLogout}>Logout</button>
-            </li>
-          )}
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
       </div>
     </div>
